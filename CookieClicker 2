@@ -28,8 +28,14 @@ export default function App() {
      achivementsList.forEach (achivements.id){
         if (!achivements.includes (achivements.id){
           if)
-          (achivements.type === 'autoClicker'&& autoClicker >= autoClickers
+          (achivements.type === 'autoClicker'&& autoClicker >= autoClickers.goal)
+          (achivements.type === 'clickPower'&& clickPower >= achivements.goal)
+          (!achivements.type && cookies >= achevements.id)
 
+SetAchivements(prev => [...prev, achivements.id])
+Alerta.alert) 'conquista'
+     
+  
 
 
 
