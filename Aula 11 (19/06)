@@ -86,6 +86,11 @@ const [lastLogin, setLastLogin] = useState(New Date().toDateString())
       <Text style={styles.text}>Poder de Clique: {clickPower}</Text>
       <Text style={styles.text}>Auto-Clickers: {autoClickers}</Text>
 
+      <Text style={style.text}>Meta diária: {dailyGoal}cookies</text>
+      <Text style={style.text}Progresso diário: {dailyProgress} cookies </Text>
+
+
+
       <TouchableOpacity style={styles.button} onPress={handleClick}>
         <Text style={styles.buttonText}>Clique para ganhar cookies!</Text>
       </TouchableOpacity>
