@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, FlatList, Alert } from 'react-native';
 
+
+
+import (audio} from 'expo-av'; //importa o módulo de áudio do Expo
+
+
+
 export default function App() {
   const [cookies, setCookies] = useState(0);
   const [clickPower, setClickPower] = useState(1);
@@ -12,6 +18,13 @@ const [dailyProgress, setDailyProgress] = useState (0);
 const [lastLogin, setLastLogin] = useState(New Date().toDateString())
 
 
+
+//Estados para som
+const [sound, setSound] = useState();
+
+
+
+
   // Lista de conquistas baseadas em metas de cookies
   const achievementsList = [
     { id: 1, name: 'Primeiros 10 Cookies!', goal: 10 },
@@ -20,6 +33,16 @@ const [lastLogin, setLastLogin] = useState(New Date().toDateString())
     { id: 4, name: '5 Auto-Clickers!', goal: 5, type: 'autoClicker' },
     { id: 5, name: 'Clique Poderoso 10+', goal: 10, type: 'clickPower' },
   ];
+
+
+
+async function playSound() {
+   const {sound} = await Audio.Sound.creatAsync(
+     require('./assets/click-sound.mp3') //Certifique-se de ter um arquivo de som na pasta assets
+
+
+
+
 
   const handleClick = () => {
     setCookies(cookies + clickPower);
